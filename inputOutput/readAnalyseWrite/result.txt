@@ -1,0 +1,5 @@
+1. The shortest word is: din
+2. The longest word is: scriitorilor
+3. The first word is: din
+4. The last word is: uniunea
+5. The total number of words is: 4
