@@ -7,7 +7,6 @@ public class App {
 	/* Given an int array of random numbers, use 3 threads
 	 * to reverse each number in the array along with a message containing:
 	 * [thread number] [array index] [initial number] [reversed number]
-	 * 
 	 * example: [1] [Position:  2 ] [Initial:  398] [Reversed:  893 ]
 		    [3] [Position: 26 ] [Initial: 4931] [Reversed: 1394 ]
                    [2] [Position: 13 ] [Initial: 7793] [Reversed: 3977 ]
