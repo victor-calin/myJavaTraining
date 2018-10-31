@@ -10,7 +10,7 @@ public class App {
 	 * 
 	 * example: [1] [Position:  2 ] [Initial:  398] [Reversed:  893 ]
 		    [3] [Position: 26 ] [Initial: 4931] [Reversed: 1394 ]
-                    [2] [Position: 13 ] [Initial: 7793] [Reversed: 3977 ]
+                   [2] [Position: 13 ] [Initial: 7793] [Reversed: 3977 ]
 	 */
 	
 	static int[] array;
