@@ -8,7 +8,6 @@ public class ShapeMatrixGenerator {
 	 * Second matrix will have a "ascending vertical shape.	 * 
 	 */
 	
-	
 	private static final int limit = 11;
 	private static Random r = new Random();
 	private int row;
