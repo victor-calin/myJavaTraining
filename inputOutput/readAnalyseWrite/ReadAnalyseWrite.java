@@ -10,7 +10,7 @@ import java.util.List;
 public class ReadAnalyseWrite {
 	
 	/* Write a program which receives a list of words and writes a result file
-	 * which contains: 1. the shortest word
+	 * which contains: 		   1. the shortest word
 	 * 				   2. the longest word
 	 * 				   3. first word in alphabetic order
 	 * 				   4. last word in alphabetic order
