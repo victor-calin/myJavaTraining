@@ -1,6 +1,6 @@
 The project represents an Event Planner application which
 is intended to offer an User Interface int order to manage
-specific operations based on user choosing.
+specific operations based on user's choosing.
 
 The project objective is to make use of data collections
 and the concept of delegation.
