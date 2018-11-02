@@ -2,7 +2,8 @@ package myJavaTraining.projects.smartphone;
 
 public class App {
 	
-	/* 			iPhone 7:
+	/* 	  OUTPUT:
+	 * 			iPhone 7:
 	 *	- it has a leather dark red case
 	 *	- 1000500 pixels
 	 *	- width: 6.7, length: 13.8, depth: 0.7
