@@ -32,55 +32,60 @@ public class RentApp implements Serializable {
 			System.out.println("Asteapta comanda: (help - Afiseaza lista de comenzi)");
 			String command = sc.nextLine().toLowerCase();
 			switch(command) {
-			case "help":
-				printCommandsList();
-				break;
-			case "add":
-				rentCar(getPlateNo(), getOwnerName());
-				break;
-			case "check":
-				System.out.println(isCarRent(getPlateNo()));
-				break;
-			case "remove":
-				returnCar(getPlateNo());
-				break;
-			case "getowner":
-				String owner = getCarRent(getPlateNo());
-				if(owner == null)
-					System.out.println("Ne pare rau, dar masina cu numarul introdus nu figureaza in baza noastra de date, incearca alt numar.");
-				else 
-					System.out.println("Proprietarul curent este: " + owner);
-				break;
-			case "getcarsno":
-				owner = getOwnerName();
-				if(!ownerList.containsKey(owner))
-					System.out.println("Ne pare rau, persoana introdusa nu figureaza in baza noastra de date.");
-				else 
-					System.out.println("Numarul de masini inchiriate de " + owner + " este: " + getOwnerList(owner).getCarsNo());
-				break;
-			case "getcarslist":
-				owner = getOwnerName();
-				if(!ownerList.containsKey(owner))
-					System.out.println("Ne pare rau, persoana introdusa nu figureaza in baza noastra de date.");
-				else 
-					System.out.println("Masinile inchiriate de " + owner + " sunt:\n" + getOwnerList(owner).getCarList());
-				break;
-			case "totalrented":
-				System.out.println("Numarul total de masini inchiriate este: " + rentedCars.size());
-				break;
-			case "reset":
-				rentedCars = null;
-				ownerList = null;
-				init();
-				break;
-			case "quit":
-				System.out.println("Aplicatia se inchide...");
-				writeBinaryFile(rentedCars, ownerList);
-				quit = true;
-				break;
-			default:
-				System.out.println("Unknown command. Choose from:");
-				printCommandsList();
+				case "help":
+					printCommandsList();
+					break;
+				case "add":
+					rentCar(getPlateNo(), getOwnerName());
+					break;
+				case "check":
+					System.out.println(isCarRent(getPlateNo()));
+					break;
+				case "remove":
+					returnCar(getPlateNo());
+					break;
+				case "getowner":
+					String owner = getCarRent(getPlateNo());
+					if(owner == null)
+						System.out.println("Ne pare rau, dar masina cu numarul introdus nu figureaza " +
+								   "in baza noastra de date, incearca alt numar.");
+					else 
+						System.out.println("Proprietarul curent este: " + owner);
+					break;
+				case "getcarsno":
+					owner = getOwnerName();
+					if(!ownerList.containsKey(owner))
+						System.out.println("Ne pare rau, persoana introdusa nu figureaza " +
+								   "in baza noastra de date.");
+					else 
+						System.out.println("Numarul de masini inchiriate de " + owner + 
+								   " este: " + getOwnerList(owner).getCarsNo());
+					break;
+				case "getcarslist":
+					owner = getOwnerName();
+					if(!ownerList.containsKey(owner))
+						System.out.println("Ne pare rau, persoana introdusa nu figureaza " +
+								   "in baza noastra de date.");
+					else 
+						System.out.println("Masinile inchiriate de " + owner +
+								   " sunt:\n" + getOwnerList(owner).getCarList());
+					break;
+				case "totalrented":
+					System.out.println("Numarul total de masini inchiriate este: " + rentedCars.size());
+					break;
+				case "reset":
+					rentedCars = null;
+					ownerList = null;
+					init();
+					break;
+				case "quit":
+					System.out.println("Aplicatia se inchide...");
+					writeBinaryFile(rentedCars, ownerList);
+					quit = true;
+					break;
+				default:
+					System.out.println("Unknown command. Choose from:");
+					printCommandsList();
 			}
 		}
 	}
