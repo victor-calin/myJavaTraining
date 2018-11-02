@@ -34,7 +34,7 @@ public class ReversePolishNotation {
 			} else if(ch != '(' && ch != ')') {
 				while(stack.peekFirst() != null && stack.peekFirst() != "(" &&
 						(getPrecedence(ch) < getPrecedence(stack.peekFirst()) ||  
-								(getPrecedence(ch) == getPrecedence(stack.peekFirst()) && getPrecedence(ch) != 13))) {
+						(getPrecedence(ch) == getPrecedence(stack.peekFirst()) && getPrecedence(ch) != 13))) {
 					postFix.add(stack.removeFirst());
 				}
 
