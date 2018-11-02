@@ -7,9 +7,9 @@ import java.util.List;
 
 public class ReversePolishNotation {
 	
-	/*/ Output:   In-Fixed expression: 3+(2+1)*2^3^2-8/(5-1*2/2)
-	 *			  Post-Fixed expression: 321+232^^*+8512*2/-/-
-	 *			  Post-Fixed evaluation: 1537
+	/*/ Output:     In-Fixed expression: 3+(2+1)*2^3^2-8/(5-1*2/2)
+	 *	      Post-Fixed expression: 321+232^^*+8512*2/-/-
+	 *	      Post-Fixed evaluation: 1537
 	 */
 	
 	public static void main(String[] args) {
@@ -75,21 +75,21 @@ public class ReversePolishNotation {
 				Integer op1 = stack.removeFirst();
 				Integer op2 = stack.removeFirst();
 				switch(tokens[i]) {
-				case "+":
-					stack.addFirst(op1 + op2);
-					break;
-				case "-":
-					stack.addFirst(op2 - op1);
-					break;
-				case "*":
-					stack.addFirst(op1 * op2);
-					break;
-				case "/":
-					stack.addFirst(op2 / op1);
-					break;
-				case "^":
-					stack.addFirst(myPow(op2, op1));
-					break;
+					case "+":
+						stack.addFirst(op1 + op2);
+						break;
+					case "-":
+						stack.addFirst(op2 - op1);
+						break;
+					case "*":
+						stack.addFirst(op1 * op2);
+						break;
+					case "/":
+						stack.addFirst(op2 / op1);
+						break;
+					case "^":
+						stack.addFirst(myPow(op2, op1));
+						break;
 				}
 			}
 		}
@@ -99,32 +99,32 @@ public class ReversePolishNotation {
 
 	private static int getPrecedence(char op) {
 		switch(op) {
-		case '+':
-		case '-':
-			return 11;
-		case '*':
-		case '/':
-			return 12;
-		case '^':
-			return 13;
-		default:
-			return -1;
+			case '+':
+			case '-':
+				return 11;
+			case '*':
+			case '/':
+				return 12;
+			case '^':
+				return 13;
+			default:
+				return -1;
 		}
 	}
 
 
 	private static int getPrecedence(String op) {
 		switch(op) {
-		case "+":
-		case "-":
-			return 11;
-		case "*":
-		case "/":
-			return 12;
-		case "^":
-			return 13;
-		default:
-			return -1;
+			case "+":
+			case "-":
+				return 11;
+			case "*":
+			case "/":
+				return 12;
+			case "^":
+				return 13;
+			default:
+				return -1;
 		}
 	}
 
