@@ -1,7 +1,5 @@
 package myJavaTraining.projects.surpriseGenerator;
 
-import java.util.concurrent.TimeUnit;
-
 public class GiveSurpriseAndApplause extends AbstractGiveSurprises {
 
 	public GiveSurpriseAndApplause(String bagType, int waitTime) {
