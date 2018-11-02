@@ -7,6 +7,6 @@ abstraction and generics.
 
 
 Requirements:
-	- create 3 different type of species
-	- create 3 different types of generic containers 
-	- use interfaces to implement common behavior
+- create 3 different type of species
+- create 3 different types of generic containers 
+- use interfaces to implement common behavior
